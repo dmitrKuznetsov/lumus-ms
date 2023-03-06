@@ -1,10 +1,9 @@
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: true
+#    show-sql: true
     hibernate:
       ddl-auto: update
-      show-sql: true
   datasource:
     url: jdbc:postgresql://localhost:5432/lumus-ms-db
     username: admin

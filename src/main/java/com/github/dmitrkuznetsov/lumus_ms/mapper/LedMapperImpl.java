@@ -1,8 +1,7 @@
-package com.github.dmitrkuznetsov.lumus_ms.mapper.impl;
+package com.github.dmitrkuznetsov.lumus_ms.mapper;
 
 import com.github.dmitrkuznetsov.lumus_ms.dto.LedInfo;
 import com.github.dmitrkuznetsov.lumus_ms.dto.LedResponse;
-import com.github.dmitrkuznetsov.lumus_ms.mapper.LedMapper;
 import com.github.dmitrkuznetsov.lumus_ms.repository.entity.Led;
 import org.springframework.stereotype.Component;
 
@@ -16,13 +15,12 @@ public class LedMapperImpl implements LedMapper {
         .model(led.getModel())
         .brand(led.getBrand())
         .rating(led.getRating())
-        .price(led.getRub() == null ? "-" : led.getRub().toString())
+        .price(led.getRub())
         .voltage(led.getU())
-        .life(led.getLife().toString())
-        .temp(new LedInfo(led.getColor_l(), led.getColor()))
-        .brightness(new LedInfo(led.getLm_l(), led.getLm()))
-        .usage(new LedInfo(led.getPower_l(), led.getP()))
-        .power(new LedInfo(led.getPower_l(), led.getP()))
+        .life(led.getLife())
+        .temp(new LedInfo<>(led.getColor_l(), led.getColor()))
+        .brightness(new LedInfo<>(led.getLm_l(), led.getLm()))
+        .power(new LedInfo<>(led.getPower_l(), led.getP()))
         .build();
   }
 

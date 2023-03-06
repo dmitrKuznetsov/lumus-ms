@@ -22,18 +22,16 @@ public class LedResponse {
   @Schema(description = "Рейтинг (0-5)")
   private Double rating;
   @Schema(description = "Срок службы, час")
-  private String life;
+  private Integer life;
   @Schema(description = "Цена, руб")
-  private String price;
+  private Double price;
   @Schema(description = "Рабочее напряжение, минимальное, В")
   private String voltage;
   @Schema(description = "Цветовая температура, К")
-  private LedInfo temp;
+  private LedInfo<Integer> temp;
   @Schema(description = "Яркость, лм")
-  private LedInfo brightness;
-  @Schema(description = "Потребление, Вт/ч")
-  private LedInfo usage;
+  private LedInfo<Integer> brightness;
   @Schema(description = "Мощность, Вт")
-  private LedInfo power;
+  private LedInfo<Double> power;
 
 }

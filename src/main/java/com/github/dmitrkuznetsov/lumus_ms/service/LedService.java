@@ -4,5 +4,5 @@ import com.github.dmitrkuznetsov.lumus_ms.dto.LedResponse;
 
 public interface LedService {
 
-  LedResponse findLedByBarcode(Long barcode);
+  LedResponse findLedByBarcode(String barcode);
 }

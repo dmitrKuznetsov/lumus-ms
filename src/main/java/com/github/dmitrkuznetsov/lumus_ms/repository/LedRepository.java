@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface LedRepository extends JpaRepository<Led, Integer> {
 
-  Optional<Led> findByBarcode(Long barcode);
+  Optional<Led> findByBarcode(String barcode);
 }
